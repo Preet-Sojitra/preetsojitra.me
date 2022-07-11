@@ -1,5 +1,5 @@
 // redirecting to "preetsojitra.me"
-const currentUrl = "http://preetsojitra.me/Personal_Portfolio/"
+const currentUrl = "https://preetsojitra.me/Personal_Portfolio/"
 if (window.location.href == currentUrl) {
   window.location.replace("https://preetsojitra.me/")
 }
