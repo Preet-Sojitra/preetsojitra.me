@@ -109,7 +109,8 @@ function bgAnimation() {
 // Typing effect
 const options = {
   strings: [
-    "Front-End Developer ^800",
+    "Machine Learning Enthusiast ^800",
+    "Full-Stack Developer ^800",
     "Freelancer ^800",
     "Programmer ^800",
     "Student ^800",
@@ -124,7 +125,7 @@ const options = {
 const typed = new Typed(".secondary-heading", options)
 
 // ScrollReveal
-ScrollReveal().reveal(".education-cards", { delay: 70, reset: true })
+ScrollReveal().reveal(".education-cards", {delay: 70, reset: true})
 
 // Scroll Down Arrow
 const aboutMe = document.getElementById("scroll-about-me")
