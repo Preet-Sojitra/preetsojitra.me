@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme")
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,15 +12,22 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      xs: "475px",
+      lmd: "850px",
+      ...defaultTheme.screens,
+    },
     extend: {
       colors: {
         background: "#000000",
         primary: "#f4b4f6",
         secondary: "#7684ff",
-        "font-clr": "rgba(234, 234, 234, 0.8)",
+        subtleWhite: "rgba(234, 234, 234, 0.8)",
       },
       fontFamily: {
         oswald: ["var(--font-oswald)"],
+        anton: ["var(--font-anton)"],
+        poppins: ["var(--font-poppins)"],
       },
     },
   },

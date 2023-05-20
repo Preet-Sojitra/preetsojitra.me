@@ -1,9 +1,10 @@
 import "../global.css"
+import Layout from "../components/Layout"
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className="p-10 bg-background min-h-screen">
+    <Layout>
       <Component {...pageProps} />
-    </main>
+    </Layout>
   )
 }
