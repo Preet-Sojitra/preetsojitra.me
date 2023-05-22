@@ -72,7 +72,7 @@ export default function Home() {
             {socials.map((social) => {
               if (social.type === "twitter") {
                 return (
-                  <div>
+                  <div key={social.type}>
                     <a href={social.link} target="_blank">
                       {social.icon}
                     </a>
@@ -80,7 +80,7 @@ export default function Home() {
                 )
               } else if (social.type === "github") {
                 return (
-                  <div>
+                  <div key={social.type}>
                     <a href={social.link} target="_blank">
                       {social.icon}
                     </a>
@@ -88,7 +88,7 @@ export default function Home() {
                 )
               } else {
                 return (
-                  <div>
+                  <div key={social.type}>
                     <a href={social.link} target="_blank">
                       {social.icon}
                     </a>

@@ -38,7 +38,7 @@ export default function Navbar() {
 
   return (
     <>
-      <navbar className="flex justify-between items-center">
+      <div className="flex justify-between items-center">
         <h1
           className={` ${oswald.variable} font-oswald text-secondary text-4xl sm:text-5xl`}
         >
@@ -55,7 +55,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-      </navbar>
+      </div>
 
       <HamburgerNav isNavOpen={isNavOpen} openHamNav={openHamNav} />
     </>

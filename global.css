@@ -5,3 +5,33 @@
 body{
     background-color: black;
 }
+
+/* Below styles are for customising the dropdown */
+.dropdownControl{
+    background-color: #0f0f0f !important;
+    color: rgba(234, 234, 234, 0.8) !important;
+    border: 0.5px solid rgb(56, 56, 56) !important;
+}
+
+.dropdownPlaceholder{
+   font-size: 1.4rem !important;
+}
+
+.dropdownMenu{
+    background-color: #0f0f0f !important;
+}
+
+.dropdownMenu .Dropdown-option{
+    color: rgba(234, 234, 234, 0.8);
+    font-size: 1.2rem;
+}
+
+@media (min-width: 850px) {
+    .dropdownPlaceholder{
+        font-size: 1.2rem !important;
+     }
+     .dropdownMenu .Dropdown-option{
+        font-size: 1.1rem;
+    }
+     
+}
