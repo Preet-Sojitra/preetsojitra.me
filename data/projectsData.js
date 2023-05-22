@@ -1,0 +1,68 @@
+const projects = [
+  {
+    id: 1,
+    name: "Techinnovate Mobility",
+    tags: ["React", "TailwindCSS"],
+    image: "/images/projects/techinnovate.png",
+    liveLink: "https://techinnovatemobilityjs.vercel.app/",
+    codeLink: "https://github.com/Preet-Sojitra/techinnovatemobilityjs",
+  },
+  {
+    id: 2,
+    name: "HostVans",
+    tags: ["React"],
+    image: "/images/projects/hostVans.png",
+    liveLink: "https://sparkling-twilight-8f0154.netlify.app/",
+    codeLink: "https://github.com/Preet-Sojitra/HostVans",
+  },
+  {
+    id: 3,
+    name: "Linktree Clone",
+    tags: ["NextJS"],
+    image: "/images/projects/linktreeClone.png",
+    liveLink: "https://github.com/Preet-Sojitra/LinktreeClone",
+    codeLink: "https://github.com/Preet-Sojitra/LinktreeClone",
+  },
+  {
+    id: 4,
+    name: "Store API",
+    tags: ["ExpressJS", "MongoDB"],
+    image: "/images/projects/storeAPI.png",
+    liveLink: "https://documenter.getpostman.com/view/25069159/2s93RUus4n",
+    codeLink: "https://github.com/Preet-Sojitra/StoreAPI",
+  },
+  {
+    id: 5,
+    name: "Jobs API",
+    tags: ["ExpressJS", "MongoDB"],
+    image: "/images/projects/jobsAPI.png",
+    liveLink: "https://jobs-api-ong6.onrender.com/api-docs/",
+    codeLink: "https://github.com/Preet-Sojitra/Jobs-API",
+  },
+  {
+    id: 6,
+    name: "Anirveda",
+    tags: ["React", "ExpressJS", "MongoDB"],
+    image: "/images/projects/anirveda.png",
+    liveLink: "https://anirveda.osailpdeu.in/",
+    codeLink: "https://github.com/AnirvedaPDEU/AnirvedaWebsite",
+  },
+  {
+    id: 7,
+    name: "MicroSoft Clone",
+    tags: ["TailwindCSS"],
+    image: "/images/projects/microsoftClone.png",
+    liveLink: "https://incredible-sawine-deaec7.netlify.app/",
+    codeLink: "https://github.com/Preet-Sojitra/Microsoft",
+  },
+  {
+    id: 8,
+    name: "Grocery Bud",
+    tags: ["VanillaJS"],
+    image: "/images/projects/groceryBud.png",
+    liveLink: "https://preet-sojitra.github.io/Grocery-Bud/",
+    codeLink: "https://github.com/Preet-Sojitra/Grocery-Bud",
+  },
+]
+
+export default projects
