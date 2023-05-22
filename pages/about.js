@@ -27,7 +27,6 @@ export default function About() {
             I am currently available for collaboration regarding projects
             related to machine learning or web development.Feel free to
             <a
-              class=""
               href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=preet.dev373@gmail.com"
               target="_blank"
             >

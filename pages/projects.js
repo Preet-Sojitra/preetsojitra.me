@@ -30,8 +30,6 @@ export default function Projects() {
     })
   }
 
-  console.log(filteredProjects)
-
   return (
     <>
       <div className="mt-14">
@@ -43,7 +41,7 @@ export default function Projects() {
           <Dropdown
             options={dropDownOptions}
             placeholder="Filter by Tech Stack"
-            className="w-4/5 sm:w-3/5 lmd:w-80"
+            className="w-[90%] sm:w-3/5 lmd:w-80"
             controlClassName="dropdownControl"
             menuClassName="dropdownMenu"
             arrowClassName="text-subtleWhite"

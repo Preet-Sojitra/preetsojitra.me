@@ -55,6 +55,14 @@ const projects = [
     liveLink: "https://incredible-sawine-deaec7.netlify.app/",
     codeLink: "https://github.com/Preet-Sojitra/Microsoft",
   },
+  {
+    id: 8,
+    name: "Grocery Bud",
+    tags: ["VanillaJS"],
+    image: "/images/projects/groceryBud.png",
+    liveLink: "https://preet-sojitra.github.io/Grocery-Bud/",
+    codeLink: "https://github.com/Preet-Sojitra/Grocery-Bud",
+  },
 ]
 
 export default projects

@@ -1,6 +1,0 @@
-1. Hamburger remains open when route is changed
-2. Make home page main section center
-3. Add hover effects on navbar links
-4. Add present page effect
-5. Add more projects
-6. Add download resume button

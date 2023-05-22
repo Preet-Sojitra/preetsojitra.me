@@ -3,6 +3,7 @@ import { Anton } from "next/font/google"
 import Image from "next/image"
 import { TypeAnimation } from "react-type-animation"
 import { BsTwitter, BsGithub, BsLinkedin } from "react-icons/bs"
+import { FiDownload } from "react-icons/fi"
 import Footer from "../components/Footer"
 
 const anton = Anton({
@@ -32,8 +33,8 @@ const socials = [
 export default function Home() {
   return (
     <>
-      <section className="flex flex-col-reverse items-center justify-center mt-20 gap-5 xs:mt-20 lmd:flex-row lmd:justify-between sm:mt-24 xl:w-[90%]">
-        <div className="flex text-primary flex-col gap-5 lmd:gap-8">
+      <section className="flex flex-col-reverse items-center justify-center  gap-5 lmd:flex-row lmd:justify-between xl:w-[90%] min-h-[85vh]">
+        <div className="flex text-primary flex-col gap-5 lmd:gap-8 items-center lmd:items-start">
           <div className="text-center space-y-2 lmd:text-left lmd:space-y-3 xl:space-y-4">
             <h3 className="text-subtleWhite text-xl font-anton xs:text-2xl lmd:text-3xl lmd:ml-1 xl:ml-2 xl:text-4xl">
               Hi I'm
@@ -96,6 +97,15 @@ export default function Home() {
                 )
               }
             })}
+          </div>
+
+          <div className="bg-secondary flex w-fit px-4 py-2 justify-center items-center gap-4 rounded-md mt-3 hover:bg-transparent  hover:border-[1px] hover:border-secondary hover:duration-500 group">
+            <button className=" text-black text-2xl lmd:text-xl font-medium group-hover:text-subtleWhite">
+              <a href="https://drive.google.com/file/d/1ZG434aDzbuGoJfzIpTNWdHAS8Pd2_zWl/view?usp=sharing">
+                Download CV
+              </a>
+            </button>
+            <FiDownload className="text-black text-2xl lmd:text-xl group-hover:text-subtleWhite" />
           </div>
         </div>
         <div>
