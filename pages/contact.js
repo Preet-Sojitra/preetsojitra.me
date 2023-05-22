@@ -1,6 +1,12 @@
+import Head from "next/head"
+
 export default function Contact() {
   return (
     <>
+      <Head>
+        <title>Contact | Preet Sojitra</title>
+      </Head>
+
       <div className="mt-14">
         <h1 className="text-4xl font-bold text-primary xl:text-5xl">
           Contact Me

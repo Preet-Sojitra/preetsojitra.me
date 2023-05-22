@@ -1,8 +1,22 @@
 import Image from "next/image"
+import Head from "next/head"
 
 export default function About() {
   return (
     <>
+      <Head>
+        <title>About | Preet Sojitra</title>
+        <meta
+          name="description"
+          content="Preet Sojitra is a Machine Learning Enthusiast, Full Stack Developer, Freelancer, Programmer and Student."
+        />
+        <meta
+          name="keywords"
+          content="Preet Sojitra, Preet, Sojitra, Preet Sojitra Portfolio, Preet Sojitra Website, Preet Sojitra Projects, Preet Sojitra Skills, Preet Sojitra Contact, Preet Sojitra About, Preet Sojitra Resume, Preet Sojitra CV, Preet Sojitra Machine Learning, Preet Sojitra Full Stack Developer, Preet Sojitra Freelancer, Preet Sojitra Programmer, Preet Sojitra Student"
+        />
+
+        <meta name="author" content="Preet Sojitra" />
+      </Head>
       <div className="mt-14">
         <h1 className="text-primary text-[2.5rem] font-semibold text-center lmd:text-left">
           About Me
@@ -27,6 +41,7 @@ export default function About() {
             I am currently available for collaboration regarding projects
             related to machine learning or web development.Feel free to
             <a
+              className="text-primary ml-2 relative after:bg-primary after:h-[1px] after:w-full after:absolute after:left-0 after:bottom-0"
               href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=preet.dev373@gmail.com"
               target="_blank"
             >

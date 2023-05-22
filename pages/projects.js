@@ -2,6 +2,7 @@ import { useState } from "react"
 import Dropdown from "react-dropdown"
 import Project from "../components/Project"
 import projects from "../data/projectsData"
+import Head from "next/head"
 
 export default function Projects() {
   const dropDownOptions = ["All"] // Default option
@@ -32,6 +33,10 @@ export default function Projects() {
 
   return (
     <>
+      <Head>
+        <title>Projects | Preet Sojitra</title>
+      </Head>
+
       <div className="mt-14">
         <h1 className="text-4xl font-bold text-primary xl:text-5xl">
           Projects

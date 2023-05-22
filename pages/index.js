@@ -5,6 +5,7 @@ import { TypeAnimation } from "react-type-animation"
 import { BsTwitter, BsGithub, BsLinkedin } from "react-icons/bs"
 import { FiDownload } from "react-icons/fi"
 import Footer from "../components/Footer"
+import Head from "next/head"
 
 const anton = Anton({
   weight: "400",
