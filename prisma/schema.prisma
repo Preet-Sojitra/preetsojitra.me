@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl         = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
+}
+
+model Tags {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  timing    Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Socials {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  link      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Projects {
+  id        Int      @id @default(autoincrement())
+  name      String
+  liveLink  String
+  codeLink  String
+  imageLink String
+  tags      String[]
+}
+
+model About {
+  id   Int    @id @default(autoincrement())
+  text String
+}
