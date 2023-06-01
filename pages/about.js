@@ -104,6 +104,14 @@ function Skills() {
       imagePath: "mongodb.svg",
     },
     {
+      name: "PostgreSQL",
+      imagePath: "postgresql.svg",
+    },
+    {
+      name: "Prisma",
+      imagePath: "prisma.png",
+    },
+    {
       name: "MySQL",
       imagePath: "mysql.svg",
     },

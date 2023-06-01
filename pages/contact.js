@@ -7,7 +7,7 @@ export default function Contact() {
         <title>Contact | Preet Sojitra</title>
       </Head>
 
-      <div className="mt-14">
+      <div className="mt-14 pb-10">
         <h1 className="text-4xl font-bold text-primary xl:text-5xl">
           Contact Me
         </h1>
