@@ -8,13 +8,21 @@ const poppins = Poppins({
   subsets: ["latin"],
 })
 
-export default function Layout({ children }) {
+export default function Layout({ children, isNormal = true }) {
   return (
     <main
-      className={` ${poppins.variable} font-poppins px-10 pt-10 sm:px-14  bg-background min-h-screen lg:px-16 2xl:mx-auto 2xl:max-w-[1440px]`}
+      className={` ${poppins.variable} font-poppins bg-background min-h-screen`}
     >
-      <Navbar />
-      <main>{children}</main>
+      {isNormal ? (
+        <>
+          <div className="px-10 pt-10 sm:px-14 lg:px-16 2xl:mx-auto 2xl:max-w-[1440px]">
+            <Navbar />
+            <div>{children}</div>
+          </div>
+        </>
+      ) : (
+        <>{children}</>
+      )}
       {/* <Footer /> */}
     </main>
   )
