@@ -2,10 +2,22 @@ import "../global.css"
 import "react-dropdown/style.css"
 import Layout from "../components/Layout"
 import Head from "next/head"
+import AdminLayout from "../components/AdminLayout"
 
 export default function App({ Component, pageProps, router }) {
   const isInsideAdmin = router.pathname.startsWith("/admin")
   // console.log(router)
+
+  if (isInsideAdmin) {
+    return (
+      <>
+        <AdminLayout>
+          <Component {...pageProps} />
+        </AdminLayout>
+      </>
+    )
+  }
+
   return (
     <>
       <Head>
@@ -44,7 +56,7 @@ export default function App({ Component, pageProps, router }) {
         <meta property="og:title" content="Preet Sojitra" />
         <meta property="og:url" content="https://www.preetsojitra.me/" />
       </Head>
-      <Layout isNormal={!isInsideAdmin}>
+      <Layout>
         <Component {...pageProps} />
       </Layout>
     </>

@@ -25,11 +25,15 @@ module.exports = {
         primary: "#f4b4f6",
         secondary: "#7684ff",
         subtleWhite: "rgba(234, 234, 234, 0.8)",
+        dashboardActiveLink: "#161616ce",
       },
       fontFamily: {
         oswald: ["var(--font-oswald)"],
         anton: ["var(--font-anton)"],
         poppins: ["var(--font-poppins)"],
+      },
+      gridTemplateColumns: {
+        "1-4": "1fr 4fr",
       },
     },
   },

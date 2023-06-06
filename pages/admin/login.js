@@ -20,7 +20,7 @@ export default function Login() {
     try {
       const res = await axios.post(`${API_URL}/login`, loginData)
       const data = await res.data
-      router.push("/admin") // TODO: use router.replace() instead
+      router.replace("/admin")
     } catch (error) {
       console.log(error)
     }
