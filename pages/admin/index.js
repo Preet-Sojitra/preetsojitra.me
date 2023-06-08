@@ -43,7 +43,22 @@ export default function Admin() {
   }
 
   const handleTagSave = () => {
-    console.log(tags)
+    const lastTag = tags[tags.length - 1]
+
+    try {
+      axios
+        .post(`${API_URL}/tags`, {
+          name: lastTag.name,
+          timing: parseInt(lastTag.timing),
+        })
+        .then((res) => {
+          console.log(res)
+        })
+    } catch (error) {
+      console.log(error)
+    }
+
+    console.log(lastTag)
   }
 
   return (
