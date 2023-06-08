@@ -2,25 +2,27 @@ import { useState, useEffect } from "react"
 import { AiFillEdit } from "react-icons/ai"
 import { AiFillDelete } from "react-icons/ai"
 
-export default function Table({ columns, data, setTags }) {
+export default function Table({ columns, data, setData }) {
   //   console.log(data)
-  //   console.log(columns)
+  // console.log(columns)
+
+  // TODO: Edit and Delete functionality
 
   const handleChange = (e, row) => {
     // console.log(row)
     const { name, value } = e.target
     // console.log(value)
 
-    setTags((prev) => {
-      const updatedTags = prev.map((tag) => {
-        if (tag.id === row.id) {
+    setData((prev) => {
+      const updatedData = prev.map((data) => {
+        if (data.id === row.id) {
           // Update the value for the specific row
-          return { ...tag, [name]: value }
+          return { ...data, [name]: value }
         }
-        return tag
+        return data
       })
 
-      return updatedTags
+      return updatedData
     })
   }
 
@@ -46,16 +48,30 @@ export default function Table({ columns, data, setTags }) {
                   key={column}
                   className="text-center border border-gray-700 p-2 text-lg"
                 >
-                  {column.toLowerCase() === "name" ||
-                  column.toLowerCase() === "timing" ? (
-                    <input
-                      type="text"
-                      className="bg-transparent w-full text-center"
-                      value={row[column.toLowerCase()]}
-                      onChange={(e) => handleChange(e, row)}
-                      readOnly={row?.isEditable ? false : true}
-                      name={column.toLowerCase()}
-                    />
+                  {column.toLowerCase() === columns[1].toLowerCase() ||
+                  (columns.length > 2 &&
+                    column.toLowerCase() === columns[2].toLowerCase()) ? (
+                    <>
+                      {column.toLowerCase() === "text" ? (
+                        <textarea
+                          className="bg-transparent w-full text-center"
+                          value={row[column.toLowerCase()]}
+                          onChange={(e) => handleChange(e, row)}
+                          readOnly={row?.isEditable ? false : true}
+                          name={column.toLowerCase()}
+                          rows={5}
+                        />
+                      ) : (
+                        <input
+                          type="text"
+                          className="bg-transparent w-full text-center"
+                          value={row[column.toLowerCase()]}
+                          onChange={(e) => handleChange(e, row)}
+                          readOnly={row?.isEditable ? false : true}
+                          name={column.toLowerCase()}
+                        />
+                      )}
+                    </>
                   ) : (
                     row[column.toLowerCase()]
                   )}
