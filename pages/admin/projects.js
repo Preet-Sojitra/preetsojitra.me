@@ -1,10 +1,30 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import axios from "axios"
+// import projects from "../../data/projectsData"
 import Dropdown from "react-dropdown"
-import Project from "../components/Project"
-import projects from "../data/projectsData"
-import Head from "next/head"
+import Project from "../../components/Project"
 
 export default function Projects() {
+  const API_URL = process.env.NEXT_PUBLIC_API_URL
+
+  const [projects, setProjects] = useState([])
+
+  // TODO: ADD loading state and error state and also toastify for success and error
+  useEffect(() => {
+    try {
+      const fetchData = async () => {
+        const {
+          data: { allProjects },
+        } = await axios.get(`${API_URL}/project`)
+        console.log(allProjects)
+        setProjects(allProjects)
+      }
+      fetchData()
+    } catch (error) {
+      console.log(error)
+    }
+  }, [])
+
   const dropDownOptions = ["All"] // Default option
 
   projects.forEach((project) => {
@@ -24,7 +44,7 @@ export default function Projects() {
   let filteredProjects = []
 
   if (dropDownValue === "All") {
-    filteredProjects = projects.slice(0, 6)
+    filteredProjects = projects
   } else {
     filteredProjects = projects.filter((project) => {
       return project.tags.includes(dropDownValue)
@@ -33,19 +53,13 @@ export default function Projects() {
 
   return (
     <>
-      <Head>
-        <title>Projects | Preet Sojitra</title>
-      </Head>
+      <h1 className="text-primary text-2xl ">View Projects</h1>
 
-      <div className="mt-14">
-        <h1 className="text-4xl font-bold text-primary xl:text-5xl">
-          Projects
-        </h1>
-
+      <div className="mt-5 space-x-5">
         <div className="mt-4 lmd:mt-6">
           <Dropdown
             options={dropDownOptions}
-            placeholder="Filter by Tech Stack"
+            value={dropDownValue}
             className="w-[90%] sm:w-3/5 lmd:w-80"
             controlClassName="dropdownControl"
             menuClassName="dropdownMenu"
@@ -59,12 +73,12 @@ export default function Projects() {
           {filteredProjects.map((project) => (
             <Project
               key={project.id}
-              imageSrc={project.image}
+              imageSrc={project.imageLink}
               name={project.name}
               tags={project.tags}
               liveLink={project.liveLink}
               codeLink={project.codeLink}
-              isAdmin={false}
+              isAdmin={true}
             />
           ))}
         </div>

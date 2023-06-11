@@ -42,24 +42,23 @@ export default function Socials() {
   }
 
   const handleTagSave = () => {
-    // const lastSocial = socials[socials.length - 1]
-    // try {
-    //   const postData = async () => {
-    //     axios
-    //       .post(`${API_URL}/socials`, {
-    //         name: lastSocial.name,
-    //         link: lastSocial.link,
-    //       })
-    //       .then((res) => {
-    //         console.log(res.data)
-    //       })
-    //   }
-    //   postData()
-    // } catch (error) {
-    //   console.log(error)
-    // }
+    const lastAboutMe = aboutMe[aboutMe.length - 1]
+    try {
+      const postData = async () => {
+        axios
+          .post(`${API_URL}/about`, {
+            text: lastAboutMe.text,
+          })
+          .then((res) => {
+            console.log(res.data)
+          })
+      }
+      postData()
+    } catch (error) {
+      console.log(error)
+    }
 
-    console.log(aboutMe)
+    // console.log(aboutMe)
   }
 
   return (

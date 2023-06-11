@@ -26,8 +26,12 @@ export default function Sidebar() {
       link: "/admin/about",
     },
     {
-      name: "Projects",
+      name: "All Projects",
       link: "/admin/projects",
+    },
+    {
+      name: "Add Projects",
+      link: "/admin/addprojects",
     },
   ]
 

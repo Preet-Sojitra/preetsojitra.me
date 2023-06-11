@@ -26,7 +26,8 @@ export default async function handler(req, res) {
       }
 
       // Access the file via req.file
-      //   console.log(req.file)
+      // console.log(req.file)
+      // console.log(req.body)
       const { path, mimetype } = req.file
 
       try {
@@ -45,10 +46,10 @@ export default async function handler(req, res) {
         const prisma = new PrismaClient()
         const project = await prisma.projects.create({
           data: {
-            name,
-            liveLink,
-            codeLink,
-            tags,
+            name: name || "",
+            liveLink: liveLink || "",
+            codeLink: codeLink || "",
+            tags: tags || [],
             imageLink: secure_url,
           },
         })
@@ -68,5 +69,12 @@ export default async function handler(req, res) {
         return res.status(500).json({ error: error.message })
       }
     })
+  }
+
+  if (req.method === "GET") {
+    const prisma = new PrismaClient()
+    const projects = await prisma.projects.findMany()
+
+    res.status(200).json({ allProjects: projects })
   }
 }

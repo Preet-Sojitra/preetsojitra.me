@@ -4,3 +4,6 @@ node_modules
 .vscode
 .vercel
 .env
+
+# "uploads" is temporary folder, where multer stores files. After storing them in cloud, they should be deleted ideally, if not, then congratulations, you have successfully found a bug.
+/uploads 
