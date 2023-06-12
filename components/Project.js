@@ -1,14 +1,18 @@
 import Image from "next/image"
 import { AiFillEdit } from "react-icons/ai"
 import { AiFillDelete } from "react-icons/ai"
+import Link from "next/link"
 
 export default function Project({
+  id,
   imageSrc,
   name,
   tags,
   liveLink,
   codeLink,
   isAdmin,
+  handleDelete,
+  handleEdit,
 }) {
   return (
     <>
@@ -98,8 +102,29 @@ export default function Project({
 
           {isAdmin && (
             <div className="flex mt-5 gap-5">
-              <AiFillEdit className="text-green-500 text-2xl cursor-pointer" />
-              <AiFillDelete className="text-red-500 text-2xl cursor-pointer" />
+              <Link
+                href={{
+                  pathname: `/admin/projects/[id]`,
+                  query: {
+                    id,
+                    imageSrc,
+                    name,
+                    tags,
+                    liveLink,
+                    codeLink,
+                  },
+                }}
+              >
+                <AiFillEdit
+                  className="text-green-500 text-2xl cursor-pointer"
+                  // onClick={() => handleEdit(id)}
+                />
+              </Link>
+
+              <AiFillDelete
+                className="text-red-500 text-2xl cursor-pointer"
+                onClick={() => handleDelete(id)}
+              />
             </div>
           )}
         </div>

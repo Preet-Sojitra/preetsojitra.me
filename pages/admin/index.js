@@ -45,7 +45,6 @@ export default function Admin() {
 
   const handleTagSave = () => {
     const lastTag = tags[tags.length - 1]
-
     try {
       axios
         .post(`${API_URL}/tags`, {
@@ -58,7 +57,6 @@ export default function Admin() {
     } catch (error) {
       console.log(error)
     }
-
     // console.log(lastTag)
   }
 

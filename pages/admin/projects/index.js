@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 // import projects from "../../data/projectsData"
 import Dropdown from "react-dropdown"
-import Project from "../../components/Project"
+import Project from "../../../components/Project"
 
 export default function Projects() {
   const API_URL = process.env.NEXT_PUBLIC_API_URL
@@ -51,6 +51,23 @@ export default function Projects() {
     })
   }
 
+  const handleDelete = (id) => {
+    console.log(id)
+
+    try {
+      axios.delete(`${API_URL}/project?id=${id}`).then((res) => {
+        console.log(res.data)
+        setProjects(projects.filter((project) => project.id !== id))
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const handleEdit = (id) => {
+    console.log(id)
+  }
+
   return (
     <>
       <h1 className="text-primary text-2xl ">View Projects</h1>
@@ -73,12 +90,15 @@ export default function Projects() {
           {filteredProjects.map((project) => (
             <Project
               key={project.id}
+              id={project.id}
               imageSrc={project.imageLink}
               name={project.name}
               tags={project.tags}
               liveLink={project.liveLink}
               codeLink={project.codeLink}
               isAdmin={true}
+              handleDelete={handleDelete}
+              handleEdit={handleEdit}
             />
           ))}
         </div>

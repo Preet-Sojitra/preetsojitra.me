@@ -1,10 +1,24 @@
 import { useState, useEffect } from "react"
 import { AiFillEdit } from "react-icons/ai"
 import { AiFillDelete } from "react-icons/ai"
+import { AiFillCheckSquare } from "react-icons/ai"
+import axios from "axios"
+import { useRouter } from "next/router"
 
 export default function Table({ columns, data, setData }) {
   //   console.log(data)
   // console.log(columns)
+
+  const router = useRouter()
+  // console.log(router.pathname)
+
+  // Extract "social" from "/admin/social"
+  // console.log(router.pathname.split("/"))
+  const path = router.pathname.split("/")[2]
+
+  const API_URL = process.env.NEXT_PUBLIC_API_URL
+
+  const [isEditButtonClicked, setIsEditButtonClicked] = useState(false)
 
   // TODO: Edit and Delete functionality
 
@@ -24,6 +38,69 @@ export default function Table({ columns, data, setData }) {
 
       return updatedData
     })
+  }
+
+  const handleDelete = (row) => {
+    // console.log(row.id)
+    try {
+      axios.delete(`${API_URL}/${path}?id=${row.id}`).then((res) => {
+        // console.log(res.data)
+        setData((prev) => {
+          const updatedData = prev.filter((data) => data.id !== row.id)
+          return updatedData
+        })
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const handleEdit = (row) => {
+    // console.log(row)
+    setIsEditButtonClicked(true)
+    setData((prev) => {
+      const updatedData = prev.map((data) => {
+        if (data.id === row.id) {
+          return { ...data, isEditable: true }
+        }
+        return data
+      })
+      return updatedData
+    })
+  }
+
+  const handleEditSave = (row) => {
+    const requestBody = {
+      id: row.id,
+      name: row.name,
+    }
+
+    if (row.timing) {
+      requestBody.timing = parseInt(row.timing)
+    }
+    if (row.text) {
+      requestBody.text = row.text
+    }
+    if (row.link) {
+      requestBody.link = row.link
+    }
+
+    try {
+      axios.patch(`${API_URL}/${path}`, requestBody).then((res) => {
+        // console.log(res.data)
+        setData((prev) => {
+          const updatedData = prev.map((data) => {
+            if (data.id === row.id) {
+              return { ...data, isEditable: false }
+            }
+            return data
+          })
+          return updatedData
+        })
+      })
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
@@ -78,8 +155,23 @@ export default function Table({ columns, data, setData }) {
                 </td>
               ))}
               <td className="text-center border border-gray-700 p-3 text-lg flex justify-center gap-3">
-                <AiFillEdit className="text-green-500 text-2xl cursor-pointer" />
-                <AiFillDelete className="text-red-500 text-2xl cursor-pointer" />
+                <AiFillEdit
+                  className="text-green-500 text-2xl cursor-pointer"
+                  onClick={() => handleEdit(row)}
+                />
+                <AiFillDelete
+                  className="text-red-500 text-2xl cursor-pointer"
+                  onClick={() => handleDelete(row)}
+                />
+
+                {isEditButtonClicked && (
+                  <>
+                    <AiFillCheckSquare
+                      className="text-green-500 text-2xl cursor-pointer"
+                      onClick={() => handleEditSave(row)}
+                    />
+                  </>
+                )}
               </td>
             </tr>
           ))}
