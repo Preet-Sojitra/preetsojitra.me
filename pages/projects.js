@@ -24,7 +24,8 @@ export default function Projects() {
   let filteredProjects = []
 
   if (dropDownValue === "All") {
-    filteredProjects = projects.slice(0, 6)
+    // filteredProjects = projects.slice(0, 6)
+    filteredProjects = projects
   } else {
     filteredProjects = projects.filter((project) => {
       return project.tags.includes(dropDownValue)

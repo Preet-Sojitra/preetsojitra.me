@@ -24,34 +24,34 @@ export default function About() {
 
         <div className="text-subtleWhite text-[1.6rem] xl:text-3xl mt-4 space-y-5 leading-[1.5] xl:leading-[1.52] xl:space-y-8">
           <p>
-            Hello, my name is Preet Sojitra, and I am currently pursuing my
-            undergraduate degree in Computer Science from Pandit Deendayal
-            Energy University in India. As a frontend developer with experience
-            in backend development, I specialize in creating websites for
+            Hello, I'm Preet Sojitra, currently a pre-final year undergraduate
+            student pursuing Computer Science at Pandit Deendayal Energy
+            University in India. My primary focus lies in the realms of
+            Artificial Intelligence, Machine Learning, and Data Science, with a
+            keen interest in robotics. As a developer skilled in both frontend
+            and backend technologies, I specialize in crafting websites for
             individuals and small businesses.
           </p>
           <p>
-            My passion lies in the fields of machine learning and data science,
-            and I am constantly seeking new opportunities to explore and deepen
-            my understanding of these areas. I am also interested in Data
-            Structures and Algorithms and strive to improve my programming
-            skills continually.
+            Passionate about advancing my skills in AI, ML, and robotics, I am
+            enthusiastic about exploring new opportunities that allow me to
+            delve deeper into these fields. Beyond my academic pursuits, I am an
+            avid learner who spends free time delving into the wonders of space
+            and the universe.
           </p>
           <p>
-            I am currently available for collaboration regarding projects
-            related to machine learning or web development.Feel free to
+            As a pre-final year student, I am open to collaborations and
+            discussions regarding AI and ML projects. Feel free to
             <a
-              className="text-primary ml-2 relative after:bg-primary after:h-[1px] after:w-full after:absolute after:left-0 after:bottom-0"
+              className="text-primary ml-2 relative after:bg-primary after:h-[1px] after:w-full after:absolute after:left-0 after:bottom-0 mr-2"
               href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=preet.dev373@gmail.com"
               target="_blank"
             >
-              contact me
+              reach out
             </a>
-            .
-          </p>
-          <p>
-            Apart from my academic pursuits, I am an avid learner and spend my
-            free time learning about space and the universe.
+            if you have any questions or if you're interested in exploring
+            potential collaborations in the exciting realms of Artificial
+            Intelligence, Machine Learning, and Data Science. .
           </p>
         </div>
       </div>
@@ -63,6 +63,47 @@ export default function About() {
 
 function Skills() {
   const skills = [
+    {
+      name: "Python",
+      imagePath: "python.svg",
+    },
+    {
+      name: "TensorFlow",
+      imagePath: "tensorflow.svg",
+    },
+    {
+      name: "Keras",
+      imagePath: "keras.png",
+    },
+    {
+      name: "Scikit-Learn",
+      imagePath: "scikit-learn.png",
+    },
+    {
+      name: "NumPy",
+      imagePath: "numpy.svg",
+    },
+    {
+      name: "Pandas",
+      imagePath: "pandas.svg",
+    },
+    {
+      name: "Matplotlib",
+      imagePath: "matplotlib.png",
+    },
+    {
+      name: "Seaborn",
+      imagePath: "seaborn.svg",
+    },
+    {
+      name: "OpenCV",
+      imagePath: "opencv.svg",
+    },
+    {
+      name: "Flask",
+      imagePath: "flask.png",
+    },
+    // Web
     {
       name: "NextJS",
       imagePath: "nextjs.png",
@@ -88,10 +129,6 @@ function Skills() {
       imagePath: "tailwindcss.png",
     },
     {
-      name: "Python",
-      imagePath: "python.svg",
-    },
-    {
       name: "Java",
       imagePath: "java.svg",
     },
@@ -99,6 +136,7 @@ function Skills() {
       name: "C",
       imagePath: "c.png",
     },
+    // Tools
     {
       name: "MongoDB",
       imagePath: "mongodb.svg",
@@ -108,6 +146,10 @@ function Skills() {
       imagePath: "postgresql.svg",
     },
     {
+      name: "Supabase",
+      imagePath: "supabase.png",
+    },
+    {
       name: "Prisma",
       imagePath: "prisma.png",
     },
@@ -115,16 +157,23 @@ function Skills() {
       name: "MySQL",
       imagePath: "mysql.svg",
     },
-
+    {
+      name: "ROS",
+      imagePath: "ros.png",
+    },
     {
       name: "Git",
       imagePath: "git.svg",
     },
-
+    {
+      name: "Linux",
+      imagePath: "linux.png",
+    },
     {
       name: "Bash",
       imagePath: "bash.svg",
     },
+
     {
       name: "Figma",
       imagePath: "figma.svg",

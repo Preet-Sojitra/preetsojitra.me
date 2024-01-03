@@ -3,22 +3,19 @@ import { Anton } from "next/font/google"
 import Image from "next/image"
 import { TypeAnimation } from "react-type-animation"
 import { BsTwitter, BsGithub, BsLinkedin } from "react-icons/bs"
+import { SiKaggle } from "react-icons/si"
 import { FiDownload } from "react-icons/fi"
 import Footer from "../components/Footer"
 import Head from "next/head"
 
 const anton = Anton({
+  subsets: ["latin"],
+  display: "swap",
   weight: "400",
   variable: "--font-anton",
-  subsets: ["latin"],
 })
 
 const socials = [
-  {
-    type: "twitter",
-    icon: <BsTwitter className="text-primary cursor-pointer" />,
-    link: "https://twitter.com/Preet_Sojitra03",
-  },
   {
     type: "github",
     icon: <BsGithub className="text-primary  cursor-pointer" />,
@@ -28,6 +25,16 @@ const socials = [
     type: "linkedin",
     icon: <BsLinkedin className="text-primary  cursor-pointer" />,
     link: "https://www.linkedin.com/in/preet-sojitra/",
+  },
+  {
+    type: "twitter",
+    icon: <BsTwitter className="text-primary cursor-pointer" />,
+    link: "https://twitter.com/Preet_Sojitra03",
+  },
+  {
+    type: "kaggle",
+    icon: <SiKaggle className="text-primary  cursor-pointer text-7xl" />,
+    link: "https://www.kaggle.com/preetsojitra",
   },
 ]
 
@@ -41,7 +48,7 @@ export default function Home() {
               Hi I'm
             </h3>
             <h1
-              className={` ${anton.variable} text-6xl xs:text-7xl lmd:text-8xl xl:text-9xl font-anton text-secondary`}
+              className={`${anton.variable} text-6xl xs:text-7xl lmd:text-8xl xl:text-9xl font-anton text-secondary`}
             >
               Preet Sojitra
             </h1>
@@ -52,12 +59,14 @@ export default function Home() {
               sequence={[
                 "Machine Learning Enthusiast",
                 1300,
+                "Robotics",
+                1300,
                 "Full Stack Developer",
                 1300,
                 "Freelancer",
                 1300,
-                // "Open Source Contributor",
-                // 1300,
+                "Open Source",
+                1300,
                 "Programmer",
                 1300,
                 "Student",
@@ -70,7 +79,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex justify-center text-4xl xs:text-5xl gap-5 lmd:justify-start">
+          <div className="flex justify-center text-4xl xs:text-5xl gap-5 lmd:justify-start items-center">
             {socials.map((social) => {
               if (social.type === "twitter") {
                 return (
@@ -81,6 +90,14 @@ export default function Home() {
                   </div>
                 )
               } else if (social.type === "github") {
+                return (
+                  <div key={social.type}>
+                    <a href={social.link} target="_blank">
+                      {social.icon}
+                    </a>
+                  </div>
+                )
+              } else if (social.type === "kaggle") {
                 return (
                   <div key={social.type}>
                     <a href={social.link} target="_blank">
@@ -100,9 +117,12 @@ export default function Home() {
             })}
           </div>
 
-          <div className="bg-secondary flex w-fit px-4 py-2 justify-center items-center gap-4 rounded-md mt-3 hover:bg-transparent  hover:border-[1px] hover:border-secondary hover:duration-500 group">
+          <div className="bg-secondary flex w-fit px-4 py-2 justify-center items-center gap-4 rounded-md mt-3 hover:bg-transparent border-transparent border-[1px]  hover:border-[1px] hover:border-secondary hover:duration-500 group">
             <button className=" text-black text-2xl lmd:text-xl font-medium group-hover:text-subtleWhite">
-              <a href="https://drive.google.com/file/d/1ZG434aDzbuGoJfzIpTNWdHAS8Pd2_zWl/view?usp=sharing">
+              <a
+                href="https://drive.google.com/file/d/1ZaVB_yjHxXwfNzHqZKycnkZU5R_MeMPu/view?usp=drive_link"
+                target="_blank"
+              >
                 Download CV
               </a>
             </button>

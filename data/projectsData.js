@@ -1,11 +1,52 @@
 const projects = [
   {
+    id: 9,
+    name: "EDA & Regression on Medical Cost Dataset",
+    tags: ["Python", "Numpy", "Pandas", "Matplotlib", "Machine Learning"],
+    image: "/images/projects/medicalCost.png",
+    liveLink:
+      "https://www.kaggle.com/code/preetsojitra/eda-regression-for-medical-costs",
+    codeLink: "https://github.com/Preet-Sojitra/medical_cost_regression",
+  },
+  {
+    id: 10,
+    name: "Hands On Machine Learning",
+    tags: ["Python", "Tensorflow", "Keras", "Deep Learning"],
+    image: "/images/projects/handsOnML.png",
+    liveLink: "https://github.com/Preet-Sojitra/handsOnML",
+    codeLink: "https://github.com/Preet-Sojitra/handsOnML",
+  },
+  {
+    id: 11,
+    name: "Anuvaad Ratna",
+    tags: ["NextJS", "Flask", "Tensorflow", "Python"],
+    image: "/images/projects/anuvaadRatna.png",
+    liveLink: "https://youtu.be/d3sqFWYGBTk?si=LiZHsLfnqdwJ4NRj",
+    codeLink: "https://github.com/Preet-Sojitra/AnuvaadRatna",
+  },
+  {
+    id: 12,
+    name: "GenZ Story Writer",
+    tags: ["Python", "Pandas", "Deep Learning"],
+    image: "/images/projects/genzStoryWriter.png",
+    liveLink: "https://youtu.be/3kPGzmmaWd4",
+    codeLink: "https://github.com/Preet-Sojitra/GenZ-StoryWriter",
+  },
+  {
     id: 1,
     name: "Techinnovate Mobility",
     tags: ["React", "TailwindCSS"],
     image: "/images/projects/techinnovate.png",
     liveLink: "https://techinnovatemobilityjs.vercel.app/",
     codeLink: "https://github.com/Preet-Sojitra/techinnovatemobilityjs",
+  },
+  {
+    id: 5,
+    name: "Jobs API",
+    tags: ["ExpressJS", "MongoDB"],
+    image: "/images/projects/jobsAPI.png",
+    liveLink: "https://jobs-api-ong6.onrender.com/api-docs/",
+    codeLink: "https://github.com/Preet-Sojitra/Jobs-API",
   },
   {
     id: 2,
@@ -30,14 +71,6 @@ const projects = [
     image: "/images/projects/storeAPI.png",
     liveLink: "https://documenter.getpostman.com/view/25069159/2s93RUus4n",
     codeLink: "https://github.com/Preet-Sojitra/StoreAPI",
-  },
-  {
-    id: 5,
-    name: "Jobs API",
-    tags: ["ExpressJS", "MongoDB"],
-    image: "/images/projects/jobsAPI.png",
-    liveLink: "https://jobs-api-ong6.onrender.com/api-docs/",
-    codeLink: "https://github.com/Preet-Sojitra/Jobs-API",
   },
   {
     id: 6,
