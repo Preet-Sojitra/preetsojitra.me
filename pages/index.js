@@ -117,17 +117,17 @@ export default function Home() {
             })}
           </div>
 
-          <div className="bg-secondary flex w-fit px-4 py-2 justify-center items-center gap-4 rounded-md mt-3 hover:bg-transparent border-transparent border-[1px]  hover:border-[1px] hover:border-secondary hover:duration-500 group">
-            <button className=" text-black text-2xl lmd:text-xl font-medium group-hover:text-subtleWhite">
-              <a
-                href="https://drive.google.com/file/d/1ZaVB_yjHxXwfNzHqZKycnkZU5R_MeMPu/view?usp=drive_link"
-                target="_blank"
-              >
+          <a
+            href="https://drive.google.com/file/d/1ZaVB_yjHxXwfNzHqZKycnkZU5R_MeMPu/view?usp=sharing"
+            target="_blank"
+          >
+            <div className="bg-secondary flex w-fit px-4 py-2 justify-center items-center gap-4 rounded-md mt-3 hover:bg-transparent border-transparent border-[1px]  hover:border-[1px] hover:border-secondary hover:duration-500 group">
+              <button className=" text-black text-2xl lmd:text-xl font-medium group-hover:text-subtleWhite">
                 Download CV
-              </a>
-            </button>
-            <FiDownload className="text-black text-2xl lmd:text-xl group-hover:text-subtleWhite" />
-          </div>
+              </button>
+              <FiDownload className="text-black text-2xl lmd:text-xl group-hover:text-subtleWhite" />
+            </div>
+          </a>
         </div>
         <div>
           <Image
