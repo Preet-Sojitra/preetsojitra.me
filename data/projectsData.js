@@ -1,6 +1,6 @@
 const projects = [
   {
-    id: 14,
+    id: 1,
     name: "Generating Shakespearean Text using RNN",
     tags: ["Deep Learning", "Tensorflow", "Keras", "Python", "Numpy"],
     image: "/images/projects/shakespeare.jpeg",
@@ -10,7 +10,17 @@ const projects = [
       "https://colab.research.google.com/drive/1EeHuSc7t1waluhqLljOPufDPcLbTy39u?usp=sharing",
   },
   {
-    id: 10,
+    id: 2,
+    name: "Generating Chorales Music Notes using LSTM",
+    tags: ["Deep Learning", "Tensorflow", "Keras", "Python", "Numpy"],
+    image: "/images/projects/chorales.png",
+    liveLink:
+      "https://colab.research.google.com/drive/10px1CvPJOasimDHS35sZPdv7I9jhQNf0?usp=sharing",
+    codeLink:
+      "https://colab.research.google.com/drive/10px1CvPJOasimDHS35sZPdv7I9jhQNf0?usp=sharing",
+  },
+  {
+    id: 3,
     name: "Hands On Machine Learning",
     tags: ["Python", "Tensorflow", "Keras", "Deep Learning"],
     image: "/images/projects/handsOnML.png",
@@ -18,23 +28,23 @@ const projects = [
     codeLink: "https://github.com/Preet-Sojitra/handsOnML",
   },
   {
-    id: 13,
+    id: 4,
     name: "KalaSangam - An Ecommerce PWA with Mixed Reality",
     tags: ["React", "ExpressJS", "MongoDB"],
     image: "/images/projects/kalasangam.png",
-    liveLink: "https://github.com/Preet-Sojitra/Kalasangam",
+    liveLink: "https://youtu.be/XJ2Ksomaruo",
     codeLink: "https://github.com/Preet-Sojitra/Kalasangam",
   },
   {
-    id: 17,
-    name: "ImageKit",
+    id: 5,
+    name: "imgcv",
     tags: ["Python", "Numpy"],
-    image: "/images/projects/imagekit.png",
-    liveLink: "https://github.com/Preet-Sojitra/imagekit",
-    codeLink: "https://github.com/Preet-Sojitra/imagekit",
+    image: "/images/projects/imgcv.png",
+    liveLink: "https://pypi.org/project/imgcv/",
+    codeLink: "https://github.com/Preet-Sojitra/imgcv",
   },
   {
-    id: 9,
+    id: 6,
     name: "EDA & Regression on Medical Cost Dataset",
     tags: ["Python", "Numpy", "Pandas", "Matplotlib", "Machine Learning"],
     image: "/images/projects/medicalCost.png",
@@ -43,7 +53,24 @@ const projects = [
     codeLink: "https://github.com/Preet-Sojitra/medical_cost_regression",
   },
   {
-    id: 11,
+    id: 19,
+    name: "EDA & Prediction of Heart Disease",
+    tags: [
+      "Python",
+      "Numpy",
+      "Pandas",
+      "Matplotlib",
+      "Machine Learning",
+      "Deep Learning",
+      "Tensorflow",
+      "Keras",
+    ],
+    image: "/images/projects/heartDisease.png",
+    liveLink: "https://github.com/Preet-Sojitra/heart-diesease",
+    codeLink: "https://github.com/Preet-Sojitra/heart-diesease",
+  },
+  {
+    id: 7,
     name: "Anuvaad Ratna",
     tags: ["NextJS", "Flask", "Tensorflow", "Python"],
     image: "/images/projects/anuvaadRatna.png",
@@ -51,7 +78,7 @@ const projects = [
     codeLink: "https://github.com/Preet-Sojitra/AnuvaadRatna",
   },
   {
-    id: 15,
+    id: 8,
     name: "Bondfire",
     tags: ["NextJS", "Supabase", "ExpressJS"],
     image: "/images/projects/bondfire.png",
@@ -59,7 +86,7 @@ const projects = [
     codeLink: "https://github.com/vatsal2473/bondfire-frontend",
   },
   {
-    id: 16,
+    id: 9,
     name: "Surfquest 1.0",
     tags: ["NextJS", "Supabase", "ExpressJS"],
     image: "/images/projects/surfquest.png",
@@ -67,7 +94,7 @@ const projects = [
     codeLink: "https://github.com/Encode-PDEU/encodeXmindripple",
   },
   {
-    id: 12,
+    id: 10,
     name: "GenZ Story Writer",
     tags: ["Python", "Pandas", "Deep Learning"],
     image: "/images/projects/genzStoryWriter.png",
@@ -75,7 +102,7 @@ const projects = [
     codeLink: "https://github.com/Preet-Sojitra/GenZ-StoryWriter",
   },
   {
-    id: 1,
+    id: 11,
     name: "Techinnovate Mobility",
     tags: ["React", "TailwindCSS"],
     image: "/images/projects/techinnovate.png",
@@ -83,7 +110,7 @@ const projects = [
     codeLink: "https://github.com/Preet-Sojitra/techinnovatemobilityjs",
   },
   {
-    id: 5,
+    id: 12,
     name: "Jobs API",
     tags: ["ExpressJS", "MongoDB"],
     image: "/images/projects/jobsAPI.png",
@@ -91,7 +118,7 @@ const projects = [
     codeLink: "https://github.com/Preet-Sojitra/Jobs-API",
   },
   {
-    id: 2,
+    id: 13,
     name: "HostVans",
     tags: ["React"],
     image: "/images/projects/hostVans.png",
@@ -99,7 +126,7 @@ const projects = [
     codeLink: "https://github.com/Preet-Sojitra/HostVans",
   },
   {
-    id: 3,
+    id: 14,
     name: "Linktree Clone",
     tags: ["NextJS"],
     image: "/images/projects/linktreeClone.png",
@@ -107,7 +134,7 @@ const projects = [
     codeLink: "https://github.com/Preet-Sojitra/LinktreeClone",
   },
   {
-    id: 4,
+    id: 15,
     name: "Store API",
     tags: ["ExpressJS", "MongoDB"],
     image: "/images/projects/storeAPI.png",
@@ -115,7 +142,7 @@ const projects = [
     codeLink: "https://github.com/Preet-Sojitra/StoreAPI",
   },
   {
-    id: 6,
+    id: 16,
     name: "Anirveda",
     tags: ["React", "ExpressJS", "MongoDB"],
     image: "/images/projects/anirveda.png",
@@ -123,7 +150,7 @@ const projects = [
     codeLink: "https://github.com/AnirvedaPDEU/AnirvedaWebsite",
   },
   {
-    id: 7,
+    id: 17,
     name: "MicroSoft Clone",
     tags: ["TailwindCSS"],
     image: "/images/projects/microsoftClone.png",
@@ -131,7 +158,7 @@ const projects = [
     codeLink: "https://github.com/Preet-Sojitra/Microsoft",
   },
   {
-    id: 8,
+    id: 18,
     name: "Grocery Bud",
     tags: ["VanillaJS"],
     image: "/images/projects/groceryBud.png",
