@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid"
+
 const projects = [
   {
     id: 1,
@@ -42,6 +44,37 @@ const projects = [
     image: "/images/projects/imgcv.png",
     liveLink: "https://pypi.org/project/imgcv/",
     codeLink: "https://github.com/Preet-Sojitra/imgcv",
+  },
+  {
+    id: uuidv4(),
+    name: "Micrograd - Tiny Autograd Engine",
+    tags: ["Python", "Numpy"],
+    image: "/images/projects/micrograd.png",
+    liveLink: "https://github.com/Preet-Sojitra/micrograd",
+    codeLink: "https://github.com/Preet-Sojitra/micrograd",
+  },
+  {
+    id: uuidv4(),
+    name: "Makemore - Generate more names",
+    tags: ["Python", "PyTorch", "Deep Learning"],
+    image: "/images/projects/makemore.png",
+    liveLink: "https://github.com/Preet-Sojitra/makemore",
+    codeLink: "https://github.com/Preet-Sojitra/makemore",
+  },
+  {
+    id: uuidv4(),
+    name: "Date Fruit Classification and EDA",
+    tags: [
+      "Python",
+      "Matplotlib",
+      "Machine Learning",
+      "Deep Learning",
+      "Tensorflow",
+      "Keras",
+    ],
+    image: "/images/projects/datefruit.jpg",
+    liveLink: "https://github.com/Preet-Sojitra/DateFruitClassification",
+    codeLink: "https://github.com/Preet-Sojitra/DateFruitClassification",
   },
   {
     id: 6,
